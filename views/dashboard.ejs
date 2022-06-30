@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= username %></title>
+    <link rel='stylesheet' href='/stylesheets/relatorios.css' />
+  </head>
+  <body>
+    
+
+    <header>
+      <img src="../images/tech-interno.png" alt="Tahech. ">
+      <a href="/logout">Sair</a>
+  </header>
+  <h3>Os dados abaixo podem ser filtrados e clicados. A informação é modificada de acordo com o item selecionado. Você também pode clicar no canto inferior direito do relatório para visualizá-lo em tela cheia.</h3>
+
+  <main>
+    <h2>Veja os relatórios disponíveis para sua área!</h2>
+    
+    <% for(let i = 0; i< dashboards.length; i++){ %>
+      <iframe title="<%= dashboards[i].title %>" width="100%" height="<%= dashboards[i].height %>" src="<%= dashboards[i].link %>" frameborder="0" allowFullScreen="true"></iframe>  
+    <% } %> 
+
+  </main>
+    
+  
+  </body>
+</html>

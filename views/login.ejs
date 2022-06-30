@@ -1,0 +1,32 @@
+<html>
+  <title>Tahech. Advogados</title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <body>
+    <!-- <h1>Login</h1>
+    <form action="/login" method="POST">
+      <input name="username" type="text" /><br />
+      <input name="password" type="password" /><br />
+      <input type="submit" value="Login" />
+    </form> -->
+    
+
+    <main>
+      <div class="col-6 company">
+          <img src="../images/logo_tahech.png" alt="Tahech. Advogados">
+      </div>
+      <div class="col-6">
+          <form action="/login" method="POST" class="form">
+              <span>Portal Business Intelligence</span>
+              <input class="user" name="username" type="text" placeholder="Usuário">
+              <input class="senha" name="password" type="password" placeholder="Senha">
+              <input class="send" type="submit" value="ENTRAR">
+          </form>
+      </div>
+      <% if(message) { %>
+        <p>
+          <label style="color:Red"><%= message %></label>
+        </p>
+      <%}%>
+  </main>
+  </body>
+</html>
